@@ -1,6 +1,12 @@
-def reversed(n):
-    return int(str(n)[::-1])
-    
-def formatter(n):
-    n = int(n)
-    return bin(n), oct(n)
+def reversed(number):
+    if not isinstance(number, int):
+        raise TypeError("number must be an integer")
+
+    return int(str(number)[::-1])
+
+
+def formatter(number):
+    if not isinstance(number, int):
+        raise TypeError("number must be an integer")
+
+    return bin(number), oct(number)
